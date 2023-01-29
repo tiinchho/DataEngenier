@@ -61,8 +61,8 @@ def send_message(TWILIO_ACCOUNT_SID,TWILIO_AUTH_TOKEN,input_date,df,query):
     message = client.messages \
                     .create(
                         body='\nHola! \n\n\n El pronostico de lluvia hoy '+ input_date +' en ' + query +' es : \n\n\n ' + str(df),
-                        from_=PHONE_NUMBER,
-                        to='+573222007879'
+                        from_=f'whatsapp{PHONE_NUMBER}',
+                        to='whatsapp:+5491121718650'
                     )
 
     return message.sid
